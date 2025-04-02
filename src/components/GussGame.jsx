@@ -30,6 +30,8 @@ const GussGame = ()=>{
         setPcNumber(Math.floor(Math.random()*100)+1);
         SetGuess('0');
         setCounter(0);
+        setMessage('');
+        setSecondMessage('');
     }
     return(
         <div className='guessGame-container'>
