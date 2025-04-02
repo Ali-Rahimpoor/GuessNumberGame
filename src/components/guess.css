@@ -1,0 +1,36 @@
+.guessGame-container{
+    text-align: center;
+}
+.guessGame-form{
+    display: inline-flex;
+}
+.guessGame-form *{
+    border: none;
+    outline: none;
+    background-color: rgb(30, 37, 118);
+    padding: 10px 5px;
+    color: white;
+}
+.guessGame-form *:hover{
+    border: none;
+    outline: none;
+}
+.guessGame-form :nth-child(1){
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 2px 0 0 2px;
+    width: 150px;
+}
+.guessGame-form :nth-child(1)::placeholder{
+    color: rgb(206, 201, 201);
+}
+.guessGame-form :nth-child(2){
+    background-color: rgb(69, 79, 181);
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.2s all ease-in-out;
+}
+.guessGame-form :nth-child(2):hover{
+    opacity: 1;
+}
