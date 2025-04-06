@@ -1,6 +1,6 @@
 import './guess.css'
-import { use, useState } from 'react';
-const GussGame = ()=>{
+import { useState } from 'react';
+const GuessGame = ()=>{
 
     const [message,setMessage] = useState('');
     const [secondMessage,setSecondMessage] = useState('');
@@ -58,4 +58,4 @@ const GussGame = ()=>{
 
 }
 
-export default GussGame;
+export default GuessGame;
