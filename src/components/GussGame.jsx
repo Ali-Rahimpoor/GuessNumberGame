@@ -1,7 +1,7 @@
 import './guess.css'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 const GuessGame = ()=>{
-
+   
     const [message,setMessage] = useState('');
     const [secondMessage,setSecondMessage] = useState('');
     const [guess,SetGuess] = useState('0');
@@ -33,6 +33,17 @@ const GuessGame = ()=>{
         setMessage('');
         setSecondMessage('');
     }
+   
+        // TIMER
+        const [timer,setTimer] = useState(0);
+        useEffect(()=>{
+            const interval = setInterval(()=>{
+                setTimer(prev => prev+1);
+            },1000);
+
+            return () => clearInterval(interval);
+        },[]);
+    
     return(
         <div className='guessGame-container'>
             <h1>Guess the Number ! 👾</h1>
@@ -46,8 +57,9 @@ const GuessGame = ()=>{
                 <button
                 onClick={clickGuess}
                 >Guess</button>
-                
+               
             </form>
+            <p style={{fontSize:"1.2rem"}} >Timer: {timer}</p>
             <p style={{fontSize:"1.1rem"}}>Number of Your Guess : {counter}</p>
             <h2>{message}</h2>
             <button
